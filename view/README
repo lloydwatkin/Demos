@@ -1,0 +1,16 @@
+
+Demonstration of Zend_View and Zend_Layout without the full Zend Framework
+MVC stack
+
+Author: Lloyd Watkin <lloyd@evilprofessor.co.uk>
+Since:  2010-08-10
+See:    http://www.evilprofessor.co.uk/269-naked-zend_lay…-and-zend_view/
+
+Notes:
+=======
+
+Point a browser at the public folder. Three demonstration modes invlolve passing different 'page' get parameters.
+
+* ?page=index: An index page using standard layout and view file
+* ?page=exception: Page returns 500 and uses a 'minimum' layout script
+* <Anything else>: Page returns 404 uses standard layout 
