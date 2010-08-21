@@ -74,7 +74,69 @@ abstract class Pro_View_Helper_AbstractTag
      * @var string
      */
     protected $_tagName = 'tag';
-    
+
+    /**
+     * Stores view helper name
+     * 
+     * @var string
+     */
+    protected $_class;
+
+    /**
+     * Constructor
+     * 
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->_class = get_class($this);
+        parent::__construct();
+    }
+
+    /**
+     * Magic method to take care of varying method name on view helper call
+     * 
+     * @param  string $name
+     * @param  array  $params
+     * @return mixed
+     */
+    public function __call($name, array $params)
+    {
+    	if (false === $this->_isThisHelper($name)) {
+    		throw new Zend_View_Exception("Method {$name} does not exist");
+    	}
+    	switch (count($params)) {
+    		case 0:
+    			return $this->_abstractTag();
+    		case 1:
+    			return $this->_abstractTag($params[0]);
+    		case 2:
+    			return $this->_abstractTag($params[0], $params[1]);
+    		case 3:
+    			return $this->_abstractTag($params[0], $params[1], $params[2]);
+    		case 4:
+		        return $this->_abstractTag(
+		            $params[0], $params[1], $params[2], $params[3]
+		        );
+    	}
+    }
+
+    /**
+     * Check to see if the call is for this helper
+     * 
+     * @param  string $name
+     * @return boolean
+     */
+    protected function _isThisHelper($name)
+    {
+        // Get view helper name
+        $thisClass     = $this->_class;
+        $thisHelper    = preg_split('/[^0-9A-Z]/i', $thisClass);
+        $thisHelper    = array_pop($thisHelper);
+        $thisHelper[0] = strtolower($thisHelper[0]);
+        return ($thisHelper == $name);
+    }
+
     /**
      * Draw tag method
      * 

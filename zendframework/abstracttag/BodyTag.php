@@ -57,21 +57,4 @@ class Pro_View_Helper_BodyTag
      * @var string
      */
     protected $_tagName = 'body';
-
-    /**
-     * BodyTag method
-     * 
-     * @param  string  $attribute
-     * @param  string  $value
-     * @param  boolean $replace
-     * @param  string  $separator
-     * @return App_View_Helper_BodyTag
-     */
-    public function bodyTag($attribute = null, $value = null, 
-        $replace = false, $separator = '')
-    {
-    	return $this->_abstractTag(
-    	    $attribute, $value, $replace, $separator
-    	 );
-    }
 }

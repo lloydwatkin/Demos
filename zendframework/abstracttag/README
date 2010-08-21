@@ -11,4 +11,4 @@ Notes:
 Demo assumes that you have Zend Framework and autoloading already setup on your 
 system.
 
-See index.php for usage examples.
+See demo.php for usage examples.

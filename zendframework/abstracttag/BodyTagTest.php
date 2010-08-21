@@ -322,6 +322,17 @@ class Pro_View_Helper_BodyTagTest
         );      
     }
 
+    /**
+     * Calling a completely random method (i.e. not view helper or defined method)
+     * throws PHP user error (E_USER_ERROR)
+     * 
+     * @expectedException Zend_View_Exception
+     */
+    public function testCallingUnknownMethodThrowsException()
+    {
+    	$this->_helper->notTag();
+    }
+
     // ----------------------- Data providers from here -----------------------
 
     /**
