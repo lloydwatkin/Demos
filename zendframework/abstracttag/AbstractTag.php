@@ -89,9 +89,9 @@ abstract class Pro_View_Helper_AbstractTag
      */
     public function __construct()
     {
-        $thisHelper    = preg_split('/[^0-9A-Z]/i', get_class($this));
-        $thisHelper    = array_pop($thisHelper);
-        $thisHelper[0] = strtolower($thisHelper[0]);
+        $this->_helper    = preg_split('/[^0-9A-Z]/i', get_class($this));
+        $this->_helper    = array_pop($this->_helper);
+        $this->_helper[0] = strtolower($this->_helper[0]);
         parent::__construct();
     }
 
