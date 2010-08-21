@@ -1,0 +1,14 @@
+
+Demonstration of Zend View Helper for Body/Abstract Tag
+
+Author: Lloyd Watkin <lloyd@evilprofessor.co.uk>
+Since:  2010-08-21
+See:    http://www.evilprofessor.co.uk/311-zend-framework-body-tag-view-helper/
+
+Notes:
+=======
+
+Demo assumes that you have Zend Framework and autoloading already setup on your 
+system.
+
+See index.php for usage examples.
