@@ -80,7 +80,7 @@ abstract class Pro_View_Helper_AbstractTag
      * 
      * @var string
      */
-    protected $_class;
+    protected $_helper;
 
     /**
      * Constructor
@@ -89,7 +89,9 @@ abstract class Pro_View_Helper_AbstractTag
      */
     public function __construct()
     {
-        $this->_class = get_class($this);
+        $thisHelper    = preg_split('/[^0-9A-Z]/i', get_class($this));
+        $thisHelper    = array_pop($thisHelper);
+        $thisHelper[0] = strtolower($thisHelper[0]);
         parent::__construct();
     }
 
@@ -130,11 +132,8 @@ abstract class Pro_View_Helper_AbstractTag
     protected function _isThisHelper($name)
     {
         // Get view helper name
-        $thisClass     = $this->_class;
-        $thisHelper    = preg_split('/[^0-9A-Z]/i', $thisClass);
-        $thisHelper    = array_pop($thisHelper);
-        $thisHelper[0] = strtolower($thisHelper[0]);
-        return ($thisHelper == $name);
+
+        return ($this->_helper == $name);
     }
 
     /**
