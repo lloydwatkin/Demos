@@ -1,0 +1,17 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+    <?php echo $this->headTitle() ?>
+    <?php echo $this->headScript() ?>
+    <?php echo $this->headStyle() ?>
+    <?php echo $this->headMeta() ?>
+    <?php echo $this->headLink() ?>
+</head>
+<body>
+<p>&lt;!-- Layout --&gt;</p>
+<div style="border: 0.2em #000000 solid;">
+<?php echo $this->layout()->content ?>
+<?php echo $this->inlineScript() ?>
+</div>
+</body>
+</html>
