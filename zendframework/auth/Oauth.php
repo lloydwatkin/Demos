@@ -78,7 +78,6 @@ class Pro_Auth_Adapter_Oauth
     /**
      * Performs an authentication attempt
      *
-     * @throws Zend_Auth_Adapter_Exception If authentication cannot be performed
      * @return Zend_Auth_Result
      */
     public function authenticate()
