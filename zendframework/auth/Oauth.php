@@ -190,6 +190,8 @@ class Pro_Auth_Adapter_Oauth
         if (!is_string($key) || empty($key)) {
             throw new InvalidArgumentException(self::INVALID_PARAMETER_VALUE);
         }
+        $this->_parameters[$key] = $value;
+        return $this;
     }
 
     /**
