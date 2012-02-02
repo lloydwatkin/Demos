@@ -1,0 +1,14 @@
+A simple function to perform str_replace but ignoring tags
+
+Note: This is not designed to be a powerful tool and was only 
+created for working on short HTML strings rather than full 
+HTML pages.
+
+Author: Lloyd Watkin <lloyd@evilprofessor.co.uk>
+Since:  2012-02-02
+See:    http://www.evilprofessor.co.uk/
+
+Notes:
+=======
+
+See website for descriptions.

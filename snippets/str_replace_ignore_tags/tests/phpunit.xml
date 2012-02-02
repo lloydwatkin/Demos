@@ -1,0 +1,15 @@
+<phpunit colors="true">
+    <testsuite name="str_replace_ignore_tags tests">
+        <directory suffix="Test.php">.</directory>
+    </testsuite>
+    <filter>
+        <blacklist>
+            <directory>../tests</directory>
+        </blacklist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="../report/coverage" charset="UTF-8"
+             yui="true" highlight = "true" lowUpperBound="50" highLowerBound="80" />
+        <log type="testdox-html" target="../report/testdox.html" />
+    </logging>
+</phpunit>
