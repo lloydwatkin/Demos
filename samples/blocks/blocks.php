@@ -19,7 +19,7 @@ use Block\Counter as Counter;
 
 // Generate a grid
 $generator = new Generator();
-$grid      = $generator->setSize(80, 20)->setProbability(0.45)->generate();
+$grid      = $generator->setSize(20, 20)->setProbability(0.45)->generate();
 // Draw the grid out
 $renderer  = new Console();
 echo $renderer->draw($grid);
