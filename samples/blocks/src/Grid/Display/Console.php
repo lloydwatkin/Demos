@@ -17,16 +17,11 @@
  * @subpackage Display
  */
 namespace Grid\Display;
+use \Grid\Display as Display;
 
 class Console
+    implements Display
 {
-    /**
-     * Errors
-     * 
-     * @var string    
-     */
-    const INVALID_GRID_VALUE = 'Non-boolean grid value';
-
     /**
      * Characters for cells
      * 

@@ -10,6 +10,7 @@ if (!defined('APPLICATION_PATH')) {
 }
 
 include APPLICATION_PATH . '/src/Grid/Generator.php';
+include APPLICATION_PATH . '/src/Grid/Display.php';
 include APPLICATION_PATH . '/src/Grid/Display/Console.php';
 include APPLICATION_PATH . '/src/Block/Counter.php';
 
